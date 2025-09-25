@@ -12,7 +12,7 @@ public class TodoService {
 
     public TodoService() {
         this.httpService = new HttpService();
-        this.mapper = new ObjectMapper();
+        this.mapper = JsonUtil.getMapper();
     }
 
     public List<Todo> getAllTodos() throws IOException, InterruptedException {
