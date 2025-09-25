@@ -3,6 +3,8 @@ package com.john.httppractice;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.john.httppractice.Task;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 //        HttpService httpService = new HttpService();
@@ -38,28 +40,41 @@ public class Main {
 //            System.err.println("Failed to parse JSON: " + e.getMessage());
 //        }
 
-        String json = """
-        {
-          "id": 1,
-          "name": "John Doe",
-          "email": "john@example.com",
-          "address": {
-            "street": "123 Main St",
-            "city": "Victor",
-            "zipcode": "14564"
-          }
-        }
-        """;
+//        String json = """
+//        {
+//          "id": 1,
+//          "name": "John Doe",
+//          "email": "john@example.com",
+//          "address": {
+//            "street": "123 Main St",
+//            "city": "Victor",
+//            "zipcode": "14564"
+//          }
+//        }
+//        """;
 
-        ObjectMapper mapper = new ObjectMapper();
+//        ObjectMapper mapper = new ObjectMapper();
+//
+//        try {
+//            User user = mapper.readValue(json, User.class);
+//            System.out.println("Name: " + user.name);
+//            System.out.println("Email: " + user.email);
+//            System.out.println("City: " + user.address.city);
+//        } catch (Exception e) {
+//            System.err.println("Failed to parse JSON: " + e.getMessage());
+//        }
+
+        TodoService todoService = new TodoService();
 
         try {
-            User user = mapper.readValue(json, User.class);
-            System.out.println("Name: " + user.name);
-            System.out.println("Email: " + user.email);
-            System.out.println("City: " + user.address.city);
+            List<Todo> todos = todoService.getAllTodos();
+            System.out.println("Fetched " + todos.size() + " todos.");
+            System.out.println("First todo: " + todos.get(0).getTitle());
+
+            Todo singleTodo = todoService.getTodoById(1);
+            System.out.println("Todo #1: " + singleTodo.getTitle() + " (Completed: " + singleTodo.isCompleted() + ")");
         } catch (Exception e) {
-            System.err.println("Failed to parse JSON: " + e.getMessage());
+            System.err.println("Error fetching todos: " + e.getMessage());
         }
 
 
