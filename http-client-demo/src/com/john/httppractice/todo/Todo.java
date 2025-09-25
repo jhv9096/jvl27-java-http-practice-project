@@ -1,4 +1,4 @@
-package com.john.httppractice;
+package com.john.httppractice.todo;
 
 public class Todo {
     private int userId;

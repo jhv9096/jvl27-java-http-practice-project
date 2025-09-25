@@ -1,4 +1,4 @@
-package com.john.httppractice;
+package com.john.httppractice.legacy;
 
 import java.net.URI;
 import java.net.http.HttpClient;

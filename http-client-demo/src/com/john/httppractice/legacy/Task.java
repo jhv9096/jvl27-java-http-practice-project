@@ -1,4 +1,4 @@
-package com.john.httppractice;
+package com.john.httppractice.legacy;
 
 public class Task {
     public int id;

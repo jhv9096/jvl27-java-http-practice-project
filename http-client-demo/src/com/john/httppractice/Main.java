@@ -1,7 +1,7 @@
 package com.john.httppractice;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.john.httppractice.Task;
+import com.john.httppractice.todo.Todo;
+import com.john.httppractice.todo.TodoService;
 
 import java.util.List;
 

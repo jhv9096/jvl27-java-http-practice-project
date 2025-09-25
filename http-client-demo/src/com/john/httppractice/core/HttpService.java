@@ -1,11 +1,10 @@
-package com.john.httppractice;
+package com.john.httppractice.core;
 
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class HttpService {
     private final HttpClient client;

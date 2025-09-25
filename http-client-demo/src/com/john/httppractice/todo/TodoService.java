@@ -1,7 +1,9 @@
-package com.john.httppractice;
+package com.john.httppractice.todo;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.john.httppractice.core.HttpService;
+import com.john.httppractice.core.JsonUtil;
 
 import java.io.IOException;
 import java.util.List;

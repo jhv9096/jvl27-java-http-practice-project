@@ -1,4 +1,4 @@
-package com.john.httppractice;
+package com.john.httppractice.core;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
